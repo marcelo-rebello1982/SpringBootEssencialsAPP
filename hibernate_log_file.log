@@ -1,0 +1,1382 @@
+"18-08-2021 [restartedMain] INFO  b.c.a.SpringBootAppApplication - Starting SpringBootAppApplication using Java 16.0.1 on PTISPO01-DC01 with PID 5132 (D:\Users\Administrator\Projetos Workspace\SpringBootEssencialsAPP\target\classes started by Administrador in D:\Users\Administrator\Projetos Workspace\SpringBootEssencialsAPP)
+""18-08-2021 [restartedMain] INFO  b.c.a.SpringBootAppApplication - No active profile set, falling back to default profiles: default
+""18-08-2021 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+""18-08-2021 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""18-08-2021 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 102 ms. Found 1 JPA repository interfaces.
+""18-08-2021 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@26ed7b61' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""18-08-2021 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""18-08-2021 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+""18-08-2021 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""18-08-2021 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.48]
+""18-08-2021 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+""18-08-2021 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4171 ms
+""18-08-2021 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+""18-08-2021 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+""18-08-2021 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/postgres'
+""18-08-2021 [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping filters: filterRegistrationBean urls=[/*] order=-2147483647, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+""18-08-2021 [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping servlets: dispatcherServlet urls=[/], webServlet urls=[/h2-console/*]
+""18-08-2021 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""18-08-2021 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+""18-08-2021 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""18-08-2021 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+""18-08-2021 [restartedMain] WARN  o.h.b.i.SessionFactoryOptionsBuilder - Unrecognized hibernate.hbm2ddl.auto value: 'drop-and-create'.  Supported values include 'create', 'create-drop', 'create-only', 'drop', 'update', 'none' and 'validate'.  Ignoring
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - alter table address drop constraint FKg6qcywqtp08ksr5r9lpv16g1k
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - alter table configuracao drop constraint fk_configuracao_usuario
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - alter table email_entity drop constraint FKdjnij1xj64twxe7nle3erjn9h
+""18-08-2021 [restartedMain] WARN  o.h.t.s.i.ExceptionHandlerLoggedImpl - GenerationTarget encountered exception accepting command : Error executing DDL "alter table email_entity drop constraint FKdjnij1xj64twxe7nle3erjn9h" via JDBC Statement
+"org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table email_entity drop constraint FKdjnij1xj64twxe7nle3erjn9h" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:375)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:359)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:331)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:230)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:154)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:126)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:112)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:145)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:73)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:318)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:468)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1259)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at br.com.applications.SpringBootAppApplication.main(SpringBootAppApplication.java:34)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.postgresql.util.PSQLException: ERROR: constraint "fkdjnij1xj64twxe7nle3erjn9h" of relation "email_entity" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2552)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2284)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:279)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 40 common frames omitted
+"18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - alter table phone drop constraint FK3wql5uvlg7a9y93qpgccvh9oj
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - alter table student_address drop constraint FKri7u57cq6xu0spcc1aii9prvw
+""18-08-2021 [restartedMain] WARN  o.h.t.s.i.ExceptionHandlerLoggedImpl - GenerationTarget encountered exception accepting command : Error executing DDL "alter table student_address drop constraint FKri7u57cq6xu0spcc1aii9prvw" via JDBC Statement
+"org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table student_address drop constraint FKri7u57cq6xu0spcc1aii9prvw" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:375)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:359)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:331)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:230)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:154)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:126)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:112)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:145)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:73)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:318)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:468)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1259)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at br.com.applications.SpringBootAppApplication.main(SpringBootAppApplication.java:34)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.postgresql.util.PSQLException: ERROR: constraint "fkri7u57cq6xu0spcc1aii9prvw" of relation "student_address" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2552)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2284)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:279)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 40 common frames omitted
+"18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - alter table student_address drop constraint FK10mpuj1mmky2gmxxtxt0sbqdr
+""18-08-2021 [restartedMain] WARN  o.h.t.s.i.ExceptionHandlerLoggedImpl - GenerationTarget encountered exception accepting command : Error executing DDL "alter table student_address drop constraint FK10mpuj1mmky2gmxxtxt0sbqdr" via JDBC Statement
+"org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table student_address drop constraint FK10mpuj1mmky2gmxxtxt0sbqdr" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:375)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:359)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:331)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:230)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:154)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:126)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:112)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:145)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:73)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:318)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:468)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1259)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at br.com.applications.SpringBootAppApplication.main(SpringBootAppApplication.java:34)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.postgresql.util.PSQLException: ERROR: constraint "fk10mpuj1mmky2gmxxtxt0sbqdr" of relation "student_address" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2552)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2284)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:279)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 40 common frames omitted
+"18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - alter table student_phone drop constraint FK660eaucw2dd4d21bkusnlrtyl
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - alter table student_phone drop constraint FKcmaqce3eg166eeer7wk90fmy1
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - alter table userconfiguration drop constraint FKjqk18j3pigibdbeaslwli4jvc
+""18-08-2021 [restartedMain] WARN  o.h.t.s.i.ExceptionHandlerLoggedImpl - GenerationTarget encountered exception accepting command : Error executing DDL "alter table userconfiguration drop constraint FKjqk18j3pigibdbeaslwli4jvc" via JDBC Statement
+"org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table userconfiguration drop constraint FKjqk18j3pigibdbeaslwli4jvc" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:375)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:359)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:331)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:230)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:154)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:126)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:112)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:145)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:73)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:318)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:468)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1259)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at br.com.applications.SpringBootAppApplication.main(SpringBootAppApplication.java:34)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.postgresql.util.PSQLException: ERROR: constraint "fkjqk18j3pigibdbeaslwli4jvc" of relation "userconfiguration" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2552)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2284)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:279)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 40 common frames omitted
+"18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - alter table users_profile drop constraint FKori9a2k03im1lb5c71jb0jjw7
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - alter table users_profile drop constraint FKfc2ktn0dd34entljh9t4sirwx
+""18-08-2021 [restartedMain] WARN  o.h.t.s.i.ExceptionHandlerLoggedImpl - GenerationTarget encountered exception accepting command : Error executing DDL "alter table users_profile drop constraint FKfc2ktn0dd34entljh9t4sirwx" via JDBC Statement
+"org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table users_profile drop constraint FKfc2ktn0dd34entljh9t4sirwx" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:375)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:359)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:331)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:230)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:154)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:126)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:112)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:145)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:73)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:318)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:468)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1259)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at br.com.applications.SpringBootAppApplication.main(SpringBootAppApplication.java:34)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.postgresql.util.PSQLException: ERROR: constraint "fkfc2ktn0dd34entljh9t4sirwx" of relation "users_profile" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2552)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2284)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:279)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 40 common frames omitted
+"18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - alter table usuario drop constraint fk_usuario_dominio
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - alter table usuario_grupo drop constraint fk_usuario_grupo_grupo
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - alter table usuario_grupo drop constraint fk_usuario_grupo_usuario
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - drop table if exists address cascade
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - drop table if exists client cascade
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - drop table if exists configuracao cascade
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - drop table if exists dominio cascade
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - drop table if exists email_entity cascade
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - drop table if exists grupo cascade
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - drop table if exists phone cascade
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - drop table if exists profile cascade
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - drop table if exists student cascade
+""18-08-2021 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+""18-08-2021 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - drop cascades to constraint fk306mai2otesxcdu08467ojc2n on table email
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - drop table if exists student_address cascade
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - drop table if exists student_phone cascade
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - drop table if exists tb_payment cascade
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - drop table if exists tb_product cascade
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - drop table if exists tb_user cascade
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - drop table if exists temporal_values cascade
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - drop table if exists userconfiguration cascade
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - drop table if exists users cascade
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - drop table if exists users_phone cascade
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - drop table if exists users_profile cascade
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - drop table if exists usuario cascade
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - drop table if exists usuario_grupo cascade
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - drop sequence if exists custom_sequence
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - create sequence custom_sequence start 1 increment 50
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - create table address (id int4 not null, created_at timestamp, updated_at timestamp, version int4, address_type varchar(255), city varchar(50) not null, complement varchar(60), district varchar(30) not null, state varchar(2) not null, street_address varchar(60) not null, zip_code varchar(8) not null, student_id int4, primary key (id))
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - create table client (id  serial not null, birthday varchar(255) not null, cpf varchar(255) not null, email varchar(255) not null, name varchar(255) not null, primary key (id))
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - create table configuracao (usuario_id int4 not null, encerrar_sessao_automaticamente boolean not null, receber_notificacoes boolean not null, primary key (usuario_id))
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - create table dominio (id int4 not null, nome varchar(100) not null, primary key (id))
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - create table email_entity (id int4 not null, created_at timestamp, updated_at timestamp, version int4, email varchar(255), student_id int4, primary key (id))
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - create table grupo (id int4 not null, nome varchar(100) not null, primary key (id))
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - create table phone (id int4 not null, created_at timestamp, updated_at timestamp, version int4, code_area int4 not null, number varchar(50) not null, operator varchar(50), telephone_types varchar(255), student_id int4, primary key (id))
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - create table profile (id int4 not null, created_at timestamp, updated_at timestamp, version int4, profile_name varchar(255), primary key (id))
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - create table student (id int4 not null, created_at timestamp, updated_at timestamp, version int4, cpf varchar(14), date_of_birth date, email varchar(60), gender_type varchar(255), name varchar(50) not null, profession varchar(60), status_type varchar(255), primary key (id))
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - create table student_address (address_id int4, student_id int4 not null, primary key (student_id))
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - create table student_phone (phone_id int4, student_id int4 not null, primary key (student_id))
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - create table tb_payment (id  bigserial not null, moment timestamp, primary key (id))
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - create table tb_product (id  bigserial not null, description varchar(255), img_url varchar(255), name varchar(255), price float8, primary key (id))
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - create table tb_user (id  bigserial not null, email varchar(255), name varchar(255), password varchar(255), phone varchar(255), primary key (id))
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - create table temporal_values (id  bigserial not null, calendar_date date, calendar_timestamp timestamp, instant timestamp, local_date date, local_date_time timestamp, local_time time, offset_date_time timestamp, offset_time time, sql_date date, sql_time time, sql_timestamp timestamp, util_date date, util_time time, util_timestamp timestamp, zoned_date_time timestamp, primary key (id))
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - create table userconfiguration (created_at timestamp, updated_at timestamp, version int4, end_automatic_session boolean not null, send_notification boolean not null, users_id int4 not null, primary key (users_id))
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - create table users (id int4 not null, created_at timestamp, updated_at timestamp, version int4, active boolean not null, admin boolean, last_login_date timestamp, name varchar(60) not null, password varchar(60) not null, status int4, username varchar(60) not null, primary key (id))
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - create table users_phone (id int4 not null, created_at timestamp, updated_at timestamp, version int4, primary key (id))
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - create table users_profile (profile_id int4, users_id int4 not null, primary key (users_id))
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - create table usuario (id int4 not null, login varchar(50) not null, nome varchar(100) not null, senha varchar(100), ultimo_acesso timestamp, dominio_id int4 not null, primary key (id))
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - create table usuario_grupo (usuario_id int4 not null, grupo_id int4 not null)
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - alter table client add constraint UK_plnstg0h55xcbwkkf8iehxo71 unique (cpf)
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - alter table client add constraint UK_bfgjs3fem0hmjhvih80158x29 unique (email)
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - alter table dominio add constraint un_nome unique (nome)
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - alter table grupo add constraint un_nome unique (nome)
+""18-08-2021 [restartedMain] WARN  o.h.t.s.i.ExceptionHandlerLoggedImpl - GenerationTarget encountered exception accepting command : Error executing DDL "alter table grupo add constraint un_nome unique (nome)" via JDBC Statement
+"org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table grupo add constraint un_nome unique (nome)" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlString(SchemaCreatorImpl.java:439)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlStrings(SchemaCreatorImpl.java:423)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createFromMetadata(SchemaCreatorImpl.java:348)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.performCreation(SchemaCreatorImpl.java:166)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:135)
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:121)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:156)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:73)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:318)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:468)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1259)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at br.com.applications.SpringBootAppApplication.main(SpringBootAppApplication.java:34)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.postgresql.util.PSQLException: ERROR: relation "un_nome" already exists
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2552)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2284)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:322)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:279)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 39 common frames omitted
+"18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - alter table student add constraint UK_2emmcjb5ot34n3fhedf1mktma unique (cpf)
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - create index id_nome on usuario (nome)
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - alter table usuario add constraint un_login unique (login)
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - alter table address add constraint FKg6qcywqtp08ksr5r9lpv16g1k foreign key (student_id) references student
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - alter table configuracao add constraint fk_configuracao_usuario foreign key (usuario_id) references usuario
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - alter table email_entity add constraint FKdjnij1xj64twxe7nle3erjn9h foreign key (student_id) references student
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - alter table phone add constraint FK3wql5uvlg7a9y93qpgccvh9oj foreign key (student_id) references student
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - alter table student_address add constraint FKri7u57cq6xu0spcc1aii9prvw foreign key (address_id) references address
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - alter table student_address add constraint FK10mpuj1mmky2gmxxtxt0sbqdr foreign key (student_id) references student
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - alter table student_phone add constraint FK660eaucw2dd4d21bkusnlrtyl foreign key (phone_id) references phone
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - alter table student_phone add constraint FKcmaqce3eg166eeer7wk90fmy1 foreign key (student_id) references student
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - alter table userconfiguration add constraint FKjqk18j3pigibdbeaslwli4jvc foreign key (users_id) references users
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - alter table users_profile add constraint FKori9a2k03im1lb5c71jb0jjw7 foreign key (profile_id) references profile
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - alter table users_profile add constraint FKfc2ktn0dd34entljh9t4sirwx foreign key (users_id) references users
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - alter table usuario add constraint fk_usuario_dominio foreign key (dominio_id) references dominio
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - alter table usuario_grupo add constraint fk_usuario_grupo_grupo foreign key (grupo_id) references grupo
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - alter table usuario_grupo add constraint fk_usuario_grupo_usuario foreign key (usuario_id) references usuario
+""18-08-2021 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""18-08-2021 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""18-08-2021 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+""18-08-2021 [restartedMain] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	b.c.a.c.StudentController:
+	{GET [/api/v1/students/findByID/{student_Id}]}: getStudent(Integer)
+""18-08-2021 [restartedMain] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	b.c.a.c.StudentManagementController:
+	{PUT [/management/api/v1/students/update]}: update(Student)
+	{PUT [/management/api/v1/students/update/{studentId}]}: update(Integer,Student)
+	{DELETE [/management/api/v1/students/delete]}: delete(Integer)
+	{GET [/management/api/v1/students/findAllStudents]}: findAll(Pageable)
+	{POST [/management/api/v1/students/save]}: saveAndFlush(Student)
+	{GET [/management/api/v1/students/findByNameContaining]}: findByNameIgnoreCaseContaining(String)
+	{GET [/management/api/v1/students/findByNameOrCpfOrEmailContaining]}: findByNameOrCpfOrEmailContaining(String,String,EmailEntity)
+	{GET [/management/api/v1/students/findByNameOrCpfContaining]}: findByNameOrCpfContaining(String,String)
+	{GET [/management/api/v1/students/findByID]}: findByID(Integer)
+	{GET [/management/api/v1/students/findById/{id}]}: findById(Integer)
+	{GET [/management/api/v1/students/findAllByPage]}: findAllByPage(Pageable)
+	{GET [/management/api/v1/students]}: getPage(Pageable)
+""18-08-2021 [restartedMain] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	b.c.a.c.TemplateController:
+	{GET []}: getLoginView()
+""18-08-2021 [restartedMain] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+""18-08-2021 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 16 mappings in 'requestMappingHandlerMapping'
+""18-08-2021 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+""18-08-2021 [restartedMain] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+""18-08-2021 [restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+""18-08-2021 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+""18-08-2021 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+""18-08-2021 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+""18-08-2021 [restartedMain] INFO  b.c.a.SpringBootAppApplication - Started SpringBootAppApplication in 14.726 seconds (JVM running for 16.14)
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - select nextval ('custom_sequence')
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - select nextval ('custom_sequence')
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - select nextval ('custom_sequence')
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - select nextval ('custom_sequence')
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - select nextval ('custom_sequence')
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into phone (created_at, updated_at, version, code_area, number, operator, student_id, telephone_types, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.192678100]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.192678100]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [12]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [991976552]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [Vivo]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [INTEGER] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [CEL]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [INTEGER] - [52]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into address (created_at, updated_at, version, address_type, city, complement, district, state, street_address, student_id, zip_code, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.207678800]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.207678800]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [RES]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [Pindamonhangaba]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [Casa 50]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [Jardim Cristina]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [SP]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Avenida Antonio Pinheiro Junior, 1805]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [INTEGER] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [VARCHAR] - [12400000]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [12] as [INTEGER] - [102]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.254681400]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.254681400]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [27769157803]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [java.util.GregorianCalendar[time=384810754036,areFieldsSet=true,areAllFieldsSet=true,lenient=true,zone=sun.util.calendar.ZoneInfo[id="America/Sao_Paulo",offset=-10800000,dstSavings=0,useDaylight=false,transitions=93,lastRule=null],firstDayOfWeek=1,minimalDaysInFirstWeek=1,ERA=1,YEAR=1982,MONTH=2,WEEK_OF_YEAR=11,WEEK_OF_MONTH=2,DAY_OF_MONTH=12,DAY_OF_YEAR=71,DAY_OF_WEEK=6,DAY_OF_WEEK_IN_MONTH=2,AM_PM=1,HOUR=4,HOUR_OF_DAY=16,MINUTE=52,SECOND=34,MILLISECOND=36,ZONE_OFFSET=-10800000,DST_OFFSET=0]]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [mp.rebello.martins@gmail.com]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [MALE]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Marcelo Paulo Rebello Martins]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Developer]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [1]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student_phone (phone_id, student_id) values (?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [52]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [INTEGER] - [1]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student_address (address_id, student_id) values (?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [102]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [INTEGER] - [1]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into phone (created_at, updated_at, version, code_area, number, operator, student_id, telephone_types, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.267680200]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.267680200]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [12]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [36431881]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [Vivo]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [INTEGER] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [REC]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [INTEGER] - [53]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into address (created_at, updated_at, version, address_type, city, complement, district, state, street_address, student_id, zip_code, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.272683200]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.272683200]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [CORR]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [Pindamonhangaba]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [Village Paineiras]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [Socorro]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [SP]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Rua Tipuanas, 64]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [INTEGER] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [VARCHAR] - [12412060]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [12] as [INTEGER] - [103]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.276689200]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.276689200]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [30158469810]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [java.util.GregorianCalendar[time=1629316354036,areFieldsSet=true,areAllFieldsSet=true,lenient=true,zone=sun.util.calendar.ZoneInfo[id="America/Sao_Paulo",offset=-10800000,dstSavings=0,useDaylight=false,transitions=93,lastRule=null],firstDayOfWeek=1,minimalDaysInFirstWeek=1,ERA=1,YEAR=2021,MONTH=7,WEEK_OF_YEAR=34,WEEK_OF_MONTH=3,DAY_OF_MONTH=18,DAY_OF_YEAR=230,DAY_OF_WEEK=4,DAY_OF_WEEK_IN_MONTH=3,AM_PM=1,HOUR=4,HOUR_OF_DAY=16,MINUTE=52,SECOND=34,MILLISECOND=36,ZONE_OFFSET=-10800000,DST_OFFSET=0]]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [patymorr@hotmail]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [FEM]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Patricia Cinti Ramos Martins]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [SAP Analist]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [2]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student_phone (phone_id, student_id) values (?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [53]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [INTEGER] - [2]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student_address (address_id, student_id) values (?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [103]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [INTEGER] - [2]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.308690500]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.308690500]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [06558416875]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [adelinarebello@gmail.com]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Adelina dos Santos Rebello]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Do Lar]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [3]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.337690200]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.337690200]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [07212854425]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [n.a.info@hotmail.com]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [José Roberto]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Autonomo De TI]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [4]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.349687600]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.349687600]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [54468548703]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [carlos.nascimento@gmail.com]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Carlos do Nascimento Moura]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Analista de Infra]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [5]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.357686400]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.357686400]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [20165469840]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [andre.mendesr@bol.com.br]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [André Henrique Souza Mendes]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Analista de Suporte]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [6]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.363687500]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.363687500]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [55568485215]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [anderson.silva@uol.com.br]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Anderson Silva Junior]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Mecanico]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [7]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.372692700]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.373696800]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [22305659803]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [n.a.info@hotmail.com]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [José Moura Carlos]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Programador de circuitos]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [8]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.379709800]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.379709800]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [45215584523]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [anderson.nasc@gmail.com]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Anderson do Nascimento JR]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Instrutor de BI]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [9]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.384691100]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.384691100]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [65526448752]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [alfredo.siqueira@gmail.com]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Alfredo Henrique siqueira Campos]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Encanador]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [10]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.390692]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.390692]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [54275454235]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [sandro.comes@hotmail.com]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Sandro Come Villas]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Pedreiro]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [11]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.394693800]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.394693800]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [13236654185]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [roberto.ernesto@hotmail.com]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Roberto De Moura Enernest]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Construtor Civil]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [12]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.398689500]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.398689500]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [26515483213]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [carlos.oliveira@yahoo.com.br]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Carlos Mandarova De Oliveira]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Analista de Recursos]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [13]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.402692400]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.402692400]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [57565454520]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [joseclaudio@gmail.com]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [José Claudio Martins]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Analista de Suporte]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [14]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.405690100]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.405690100]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [54621546898]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [cesarhenrique@terra.com.br]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Cesar Henrique Nascimento Santos]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Web Desingner]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [15]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.408689900]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.408689900]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [62056468542]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [carlos.butoso@hotmail.com]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Carlos Butoso Neto]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Autonomo]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [16]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.410687800]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.410687800]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [45423568703]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [mp.rebello.martins@gmail.com]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Adriano De Reis Oliveira]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Pintor]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [17]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.413688]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.413688]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [15435185524]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [jorgesalto@t2m.com]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Jorge Del Salto]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Analista de Suporte]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [18]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.417690800]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.417690800]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [27765424804]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [josefrancisco@tendnet.com]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [José Francisco Carlos Souza]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Médico]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [19]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.420690800]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.420690800]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [33555245245]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [erivaldo@hotmail.com]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Erivaldo Henrique Mello]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Dentista]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [20]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.424692600]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.424692600]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [45215654543]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [mp.rebello.martins@gmail.com]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Sandro Pereira Barbosa]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Frentista]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [21]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.426690500]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.427692]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [22468897220]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [marcelino.reinz@mwl.com]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Marcelino Henrique Reinz]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Eletricista]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [22]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.429689600]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.429689600]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [30157563599]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [olavobatista@terra.com.br]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Olavo Batista Odonoel]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Borracheiro]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [23]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.431689200]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.431689200]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [54468548803]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [francisco.nascimneto@infosec.com]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [José Francisco Nascimento Costa]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Técnico de TI]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [24]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.434691600]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.434691600]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [31963554543]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [erisberto@modasinfo.com.br]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Erisberto De Souza]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Analista de RH]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [25]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.437692500]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.437692500]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [61105415244]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [maria.andrezza@previdencia.com.br]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Maria Andrezza Ramos Mello]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Analista de Infra]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [26]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.440693600]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.440693600]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [35100546564]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [carlaolieira@mipseg.com.br]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Maria Carla De Oliveria Souza]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Lavadora]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [27]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.442690500]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.442690500]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [35566410754]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [jose.ribas@securittyl.com]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [José Ribas Francisco Costa]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Copeiro]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [28]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.445690700]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.445690700]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [52105654454]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [sandra@ig.com.br]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Sandra Evelino Adal]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Cozinheira]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [29]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.448718]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.448718]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [61554283454]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [marcos.info@hotmail.com]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Marcos Marcolino Souza]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Desembargador]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [30]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.451692]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.451692]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [54425625481]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [evelino.reis@hotmail.com]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Evelino dos Santos Reis]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Desembargador]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [31]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.455695200]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.455695200]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [34198125445]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [erivaldo@hotmail.com]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Alberto Henrique Mello]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Dentista]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [32]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.458696600]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.458696600]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [32564874523]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [mp.rebello.martins@gmail.com]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Sandro Pereira Barbosa]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Frentista]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [33]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.461696400]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.461696400]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [10215458720]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [marcelino.reinz@mwl.com]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Marcelino Henrique Reinz]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Eletricista]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [34]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.464696200]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.464696200]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [20132564599]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [olavobatista@terra.com.br]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Olavo Batista Odonoel]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Borracheiro]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [35]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.467692800]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.467692800]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [45312886603]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [francisco.nascimneto@infosec.com]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [José Francisco Nascimento Costa]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Técnico de TI]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [36]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.470691]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.470691]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [47582454543]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [erisberto@modasinfo.com.br]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Erisberto De Souza]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Analista de RH]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [37]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.473693800]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.473693800]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [43546765444]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [maria.andrezza@previdencia.com.br]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Maria Andrezza Ramos Mello]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Analista de Infra]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [38]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.476694]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.476694]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [35343546664]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [carlaolieira@mipseg.com.br]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Maria Carla De Oliveria Souza]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Lavadora]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [39]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.480698400]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.480698400]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [12687565444]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [jose.ribas@securittyl.com]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [José Ribas Francisco Costa]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Copeiro]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [40]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.488698900]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.488698900]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [55345677854]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [sandra@ig.com.br]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Sandra Evelino Abdal]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Cozinheira]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [41]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.491695100]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.491695100]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [61589784454]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [marcos.info@hotmail.com]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Marcos Marcolino Souza Mendez]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [esembargador]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [42]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.501695800]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.502696]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [61554425374]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [marcos.info@hotmail.com]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Marcolino Neto Souza]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Desembargador]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [43]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.504694500]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.504694500]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [54456346712]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [evelino.reis@hotmail.com]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Evelin dos Santos Reis]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Desembargador]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [44]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.512695]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.513697500]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [95544745544]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [erivaldo@hotmail.com]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Jerivaldo Henrique Mello]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Dentista]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [45]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.515693400]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.515693400]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [45215647583]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [mp.rebello.martins@gmail.com]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Sandra Pereira Barbosa Mello]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Frentista]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [46]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.518694600]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.518694600]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [14346723260]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [marcelino.reinz@mwl.com]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Marcelino Henrique Reinz]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Eletricista]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [47]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.520693400]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.520693400]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [24897654460]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [marcelino.reinz@mwl.com]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Marcelli Carlos Henrique Reinz]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Eletricista]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [48]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.525696400]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.525696400]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [23535788459]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [olavobatista@terra.com.br]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Olavo Odonoel]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Borracheiro]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [49]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.528697800]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.528697800]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [89568547343]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [erisberto@modasinfo.com.br]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Erisberto De Ramos]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Analista de RH]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [50]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.537697300]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.537697300]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [56756845244]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [maria.andrezza@previdencia.com.br]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Maria Andrezza Mello Vergueiro]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Analista de Infra]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [51]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.539699500]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.539699500]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [33678967764]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [carlaolieira@mipseg.com.br]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Maria Carla De Souza Teixeira]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Lavadora]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [152]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.541699500]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.541699500]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [12354769067]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [jose.ribas@securittyl.com]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [José Ribas Francisco Costa]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Copeiro]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [153]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.544698800]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.544698800]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [12345489953]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [francisco.olveira@infosec.com]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Francisco Oliveira Costa Junior]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Técnico de TI]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [154]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.547699200]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.547699200]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [23490678566]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [carlos.alberto@infosec.com]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Carlos Alberto Francisco Nascimento Costa]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Técnico de TI]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [155]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.549698300]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.549698300]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [12470676453]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [jose.costa@infinit.net]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [José Costa]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Técnico de TI]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [156]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.552698100]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.552698100]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [12378756533]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [jose.salgado.t@infosecurity.com]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [José Teixeira Oliveira Salgado]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Técnico de TI]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [157]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.554697300]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.554697300]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [12378903463]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [nascimneto.paula@band.com.tv]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Marcos de Julio Paula]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Técnico de TI]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [158]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.557699800]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.557699800]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [89056345603]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [adriana-ferreira@infomaster.com.br]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Adriana Ferreir Bicudo]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Técnico de TI]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [159]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.561705500]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.561705500]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [67456899703]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [carlos.moura@hello.com]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Carlos Reis de Mouta Filho]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Técnico de TI]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [160]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.564697800]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.564697800]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [56514725752]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [patriciamello@sapenginner.com]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Patricia Carneiro Souza]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Analista de Implantação SAP]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [161]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into phone (created_at, updated_at, version, code_area, number, operator, student_id, telephone_types, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.566698]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.566698]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [12]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [994652223]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [INTEGER] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [CEL]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [INTEGER] - [54]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.567698]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.567698]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [27349147803]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [juliano.lima@latam.com]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [MALE]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Juliano Lima Oliveira]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Enginner]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [162]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student_phone (phone_id, student_id) values (?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [54]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [INTEGER] - [162]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into phone (created_at, updated_at, version, code_area, number, operator, student_id, telephone_types, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.570696500]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.570696500]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [12]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [976545587]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [INTEGER] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [CEL]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [INTEGER] - [55]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into address (created_at, updated_at, version, address_type, city, complement, district, state, street_address, student_id, zip_code, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.572701200]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.572701200]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [RES]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [Pindamonhangaba]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [Centro]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [SP]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Av do Juliano Lima de Oliveira]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [INTEGER] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [VARCHAR] - [12400000]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [12] as [INTEGER] - [104]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.575697200]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.575697200]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [21458465789]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [juliano.lima@latam.com]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [MALE]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Juliano Lima Oliveira]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Enginner]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [163]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student_phone (phone_id, student_id) values (?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [55]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [INTEGER] - [163]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student_address (address_id, student_id) values (?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [104]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [INTEGER] - [163]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into phone (created_at, updated_at, version, code_area, number, operator, student_id, telephone_types, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.578698600]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.578698600]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [INTEGER] - [18]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [955486518]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [Carlos Henrique]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [INTEGER] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [CEL]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [INTEGER] - [56]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into address (created_at, updated_at, version, address_type, city, complement, district, state, street_address, student_id, zip_code, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.580698900]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.580698900]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [RES]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [VARCHAR] - [Cidade do carlos henrique]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [Centro]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [SP]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Avenida do Carlos Henrique]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [INTEGER] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [VARCHAR] - [12400000]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [12] as [INTEGER] - [105]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student (created_at, updated_at, version, cpf, date_of_birth, email, gender_type, name, profession, status_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [TIMESTAMP] - [2021-08-18T16:52:34.581698300]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [TIMESTAMP] - [2021-08-18T16:52:34.581698300]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [0]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [30158469818]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [java.util.GregorianCalendar[time=714426754036,areFieldsSet=true,areAllFieldsSet=true,lenient=true,zone=sun.util.calendar.ZoneInfo[id="America/Sao_Paulo",offset=-10800000,dstSavings=0,useDaylight=false,transitions=93,lastRule=null],firstDayOfWeek=1,minimalDaysInFirstWeek=1,ERA=1,YEAR=1992,MONTH=7,WEEK_OF_YEAR=34,WEEK_OF_MONTH=4,DAY_OF_MONTH=21,DAY_OF_YEAR=234,DAY_OF_WEEK=6,DAY_OF_WEEK_IN_MONTH=3,AM_PM=1,HOUR=4,HOUR_OF_DAY=16,MINUTE=52,SECOND=34,MILLISECOND=36,ZONE_OFFSET=-10800000,DST_OFFSET=0]]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [VARCHAR] - [carlos.henrique@latam.com]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [MALE]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [VARCHAR] - [Carlos Henrique Oliveira]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [Enginner]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [VARCHAR] - [null]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [11] as [INTEGER] - [164]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student_phone (phone_id, student_id) values (?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [56]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [INTEGER] - [164]
+""18-08-2021 [restartedMain] DEBUG org.hibernate.SQL - insert into student_address (address_id, student_id) values (?, ?)
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [105]
+""18-08-2021 [restartedMain] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [INTEGER] - [164]
+"
