@@ -1,7 +1,5 @@
 package br.com.applications.errors;
 
-
-
 public class ErrorDetails extends Exception {
 
     private static final long serialVersionUID = -5019981811066579983L;

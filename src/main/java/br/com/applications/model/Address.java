@@ -1,26 +1,27 @@
 package br.com.applications.model;
 
 import br.com.applications.enumeration.AddressType;
-import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.extern.apachecommons.CommonsLog;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.List;
 
 
-@Data
-@CommonsLog
-@NoArgsConstructor
-@Entity(name = "ADDRESS")
-@EqualsAndHashCode(callSuper = true)
+@Entity
+@RequiredArgsConstructor
+@Getter
+@Setter
 public class Address extends AbstractEntity<Integer> implements Serializable {
+    // extends AbstractEntity<Integer> implements Serializable, GenericEntity<Address>
 
     @Id
+    @EqualsAndHashCode.Include
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = GENERATOR)
-    @Column(nullable = false)
     protected Integer Id;
 
     @Column(length = 60, nullable = false, unique = false)
@@ -46,6 +47,7 @@ public class Address extends AbstractEntity<Integer> implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "student_Id", referencedColumnName = "Id")
+    @OnDelete(action = OnDeleteAction.CASCADE)
     private Student student;
 
 
@@ -58,7 +60,7 @@ public class Address extends AbstractEntity<Integer> implements Serializable {
         this.addressType = addressType;
     }
 
-    public Address(String streetAddress,  String complement,  String city, String district,String state, String zipCode, AddressType addressType) {
+    public Address(String streetAddress, String complement, String city, String district, String state, String zipCode, AddressType addressType) {
         this.streetAddress = streetAddress;
         this.complement = complement;
         this.city = city;

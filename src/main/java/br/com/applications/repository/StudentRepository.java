@@ -14,94 +14,105 @@ import org.springframework.stereotype.Repository;
 
 import javax.transaction.Transactional;
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 @Transactional
 public interface StudentRepository extends GenericRepository<Student> {
 
 
-    @Query("select s from STUDENT s")
+    @Query("select s from student s")
     List<Student> findAllSorted(Sort sort);
 
-    @Query("select s FROM STUDENT s")
+    @Query("select s FROM student s")
     Page<Student> findAllPage(Pageable pageable);
 
-    @Query("select s from STUDENT s")
+    @Query("select s from student s")
     Slice<Student> findAllStudent(Pageable pageable);
 
-
-
-    @Query("select s from STUDENT s where s.name = :name")
+    @Query("select s from student s where s.name = :name")
     Slice<Student> findByStudentCustom(
             @Param("name") String Name, Pageable pageable);
 
-    @Query("select s from STUDENT s where s.name = :name")
+    @Query("select s from student s where s.name = :name")
     List<Student> findByStudentSorted(
             @Param("name") String Name, Sort sort);
 
-    Student findStudentByName(String name);
+    @Query("select s from student s where s.name = :name")
+    Student findByName(@Param("name") String name);
 
-    @Query("select s from STUDENT s where s.email = ?1")
-    Student findByEmail(EmailEntity emailAddress);
+    @Query("select s from student s where s.name like %?1%")
+    List<Student> findByNameContaining(String name);
+
+
+    @Query("select s from student s where upper(s.name) like upper(concat('%', ?1, '%'))")
+    List<Student> findByNameReturnList(String name);
+
+    @Query("select s from student s where s.emailEntity = ?1")
+    Student findByEmailEntity(EmailEntity emailAddress);
 
 //    @Query("select from ADDRESS a inner join STUDENT_ADDRESS st ON a.id = st.id")
 //    Student findStudentByAddressId(Integer id);
 
     @Modifying
-    @Query(value = "DELETE FROM STUDENT s WHERE s.name = :name")
+    @Query(value = "DELETE FROM student s WHERE s.name = :name")
     Integer deleteByName(@Param("name") String name);
 
-    @Query("FROM STUDENT ORDER BY ID ASC")
+    @Query("FROM student ORDER BY ID ASC")
     List<Student> findAllOrderByIDAsc();
 
-    @Query("FROM STUDENT ORDER BY ID DESC")
+    @Query("FROM student ORDER BY ID DESC")
     List<Student> findAllOrderByIDDesc();
 
-    @Query("FROM STUDENT ORDER BY NAME ASC")
+    @Query("FROM student ORDER BY NAME ASC")
     List<Student> findAllOrderByNameAsc();
 
-    @Query("FROM STUDENT ORDER BY EMAIL ASC")
-    List<Student> findAllOrderByEmailContainingAsc();
+    //@Query("FROM student ORDER BY EMAIL ASC")
 
-    @Query("FROM STUDENT ORDER BY EMAIL DESC")
-    List<Student> findAllOrderByEmailContainingDesc();
+    @Query("select s from student s where s.emailEntity like %?1%")
+    List<Student> findAllByEmailContaining();
 
-    @Query("select s from STUDENT s where s.name like ?1%")
+    @Query("select s from student s where s.name like ?1%")
     List<Student> findByAndSort(String name, Sort sort);
 
-    @Query("select s from STUDENT s where s.email = ?1 and s.name = ?2")
-    List<Student> findByEmailAddressAndName(EmailEntity email, String name);
+    @Query("select s from student s where s.emailEntity = :email and s.name = :name")
+    List<Student> findByEmailAndName(@Param("email") EmailEntity email, @Param("name") String name);
 
-    @Query("FROM STUDENT ORDER BY NAME DESC")
+    @Query("FROM student ORDER BY NAME DESC")
     List<Student> findAllOrderByNameDesc();
 
-    @Query("FROM STUDENT ORDER BY CPF ASC")
+    @Query("FROM student ORDER BY CPF ASC")
     List<Student> findAllOrderByCpfContainingAsc();
 
-    @Query("FROM STUDENT ORDER BY CPF DESC")
+    @Query("FROM student ORDER BY CPF DESC")
     List<Student> findAllOrderByCpfContainingDesc();
 
-    @Query("FROM STUDENT ORDER BY CPF ASC")
+    @Query("FROM student ORDER BY CPF ASC")
     List<Student> findAllOrderByCpfContainingAsc(Sort sort);
 
-    @Query("FROM STUDENT ORDER BY CPF DESC")
+    @Query("FROM student ORDER BY CPF DESC")
     List<Student> findAllOrderByCpfContainingDesc(Sort sort);
 
     List<Student> findByCpfContaining(String cpf);
 
-    List<Student> findByEmailIgnoreCaseContaining(String email);
+ //   List<Student> findByEmailIgnoreCaseContaining(String email);
 
-    List<Student> findByNameIgnoreCaseContainingOrCpfContaining(String name, String cpf);
+    @Query("select s from student s where upper(s.name) like upper(concat('%', ?1, '%')) or s.cpf like %?2%")
+    List<Student> findByNameOrCpf(String name, String cpf);
 
 
-    @Query(value = "select s from STUDENT s where s.name like %?1%")
-    List<Student> findByNameIgnoreCaseContaining(String name);
+    @Query("select s from student s where s.cpf = :cpf or upper(s.name) like upper(concat('%', :name, '%'))")
+    Student findByCpfOrName(@Param("cpf") String lastname, @Param("name") String firstname);
 
-    @Query("select s from STUDENT s where s.name = :name or s.cpf = :cpf")
-    Student findByCpfOrNameContaining(@Param("cpf") String lastname, @Param("name") String firstname);
+    @Query("select s from student s where s.name = ?1 or s.cpf = ?2 or s.emailEntity = ?3")
+    List<Student> findByNameOrCpfOrEmail(String name, String cpf, EmailEntity email);
 
-    List<Student> findByNameIgnoreCaseContainingOrCpfContainingOrEmailIgnoreCaseContaining(String name, String cpf, EmailEntity email);
+    @Query("select s from student s where upper(s.profession) like upper(concat('%', ?1, '%'))")
+    List<Student> findByProfession(String profession);
 
-    List<Student> findByProfessionIgnoreCaseContaining(String profession);
+    @Query("select s from student s where s.cpf = ?1")
+    Optional<Student> findByCpf(String cpf);
 
+    @Query("select s from student s where s.emailEntity = ?1")
+    Optional<Student> findByEmail(String email);
 }

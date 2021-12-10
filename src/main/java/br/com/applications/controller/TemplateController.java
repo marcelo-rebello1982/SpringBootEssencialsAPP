@@ -2,7 +2,6 @@ package br.com.applications.controller;
 
 import br.com.applications.generic.GetMapping;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 // @RequestMapping("/login")

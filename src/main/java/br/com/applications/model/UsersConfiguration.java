@@ -1,24 +1,24 @@
 package br.com.applications.model;
 
-import br.com.applications.generic.GenericEntity;
-import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.extern.apachecommons.CommonsLog;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
+import org.hibernate.Hibernate;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Objects;
 
-@Data
-@CommonsLog
-@NoArgsConstructor
-@Entity(name = "USERCONFIGURATION")
-@EqualsAndHashCode(callSuper = true)
-public class UsersConfiguration extends AbstractEntity<Integer> implements Serializable, GenericEntity<UsersConfiguration> {
+@Entity
+@RequiredArgsConstructor
+@Getter
+@Setter
+public class UsersConfiguration extends AbstractEntity<Integer> implements Serializable {
 
-    @javax.persistence.Id
+    @Id
+    @EqualsAndHashCode.Include
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = GENERATOR)
-    @Column(nullable = false)
     protected Integer Id;
 
     @MapsId
@@ -29,19 +29,16 @@ public class UsersConfiguration extends AbstractEntity<Integer> implements Seria
 
     private boolean endAutomaticSession;
 
-
     @Override
-    public void update(UsersConfiguration source) {
-
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
+        UsersConfiguration that = (UsersConfiguration) o;
+        return Id != null && Objects.equals(Id, that.Id);
     }
 
     @Override
-    public String getName() {
-        return null;
-    }
-
-    @Override
-    public UsersConfiguration createNewInstance() {
-        return null;
+    public int hashCode() {
+        return getClass().hashCode();
     }
 }

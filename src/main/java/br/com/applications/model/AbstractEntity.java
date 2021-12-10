@@ -1,14 +1,17 @@
 package br.com.applications.model;
 
-import lombok.Data;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.extern.apachecommons.CommonsLog;
+import org.hibernate.Hibernate;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
+import java.util.Objects;
 
 @CommonsLog
 @NoArgsConstructor
@@ -18,17 +21,30 @@ public abstract class AbstractEntity<Integer> implements Serializable {
     public static final String GENERATOR = "custom_sequence";
 
     @Id
+    @EqualsAndHashCode.Include
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = GENERATOR)
     protected Integer Id;
 
-    @Column(updatable = false)
+    @JsonIgnore
     @CreationTimestamp
-    private LocalDateTime createdAt;
+    @Column(nullable = false, columnDefinition = "timestamp")
+    private OffsetDateTime createdAt;
 
+    @JsonIgnore
     @UpdateTimestamp
-    private LocalDateTime updatedAt;
+    @Column(nullable = false, columnDefinition = "timestamp")
+    private OffsetDateTime updatedAt;
 
-    @Version
-    @Column(name = "version")
-    private int version;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
+        AbstractEntity<?> that = (AbstractEntity<?>) o;
+        return Id != null && Objects.equals(Id, that.Id);
+    }
+
+    @Override
+    public int hashCode() {
+        return getClass().hashCode();
+    }
 }

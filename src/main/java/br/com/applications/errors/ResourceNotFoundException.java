@@ -1,6 +1,5 @@
 package br.com.applications.errors;
 
-
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
@@ -8,9 +7,5 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 public class ResourceNotFoundException extends RuntimeException {
     public ResourceNotFoundException(String message) {
         super(message);
-
     }
-
-    private static final long serialVersionUID = -2204835713749453290L;
-
 }

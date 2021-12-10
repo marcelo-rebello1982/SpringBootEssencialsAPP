@@ -4,9 +4,10 @@ import br.com.applications.enumeration.AddressType;
 import br.com.applications.enumeration.GenderType;
 import br.com.applications.enumeration.TelephoneType;
 import br.com.applications.model.Address;
+import br.com.applications.model.EmailEntity;
 import br.com.applications.model.Phone;
 import br.com.applications.model.Student;
-import br.com.applications.repository.*;
+import br.com.applications.repository.StudentRepository;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,9 +15,9 @@ import org.springframework.stereotype.Service;
 
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Calendar;
 import java.util.List;
 
 @Service
@@ -25,16 +26,16 @@ import java.util.List;
 public class DBPercistence {
 
 
- //   @Autowired
- //   private OrderRepository orderRepository;
+    //   @Autowired
+    //   private OrderRepository orderRepository;
 
 //    @Autowired
 //    private CategoryRepository categoryRepository;
 
-   // @Autowired
+    // @Autowired
     // private ProductRepository productRepository;
 
-  //  @Autowired
+    //  @Autowired
     // private OrderItemRepository orderItemRepository;
 
     @Enumerated(EnumType.STRING)
@@ -43,8 +44,8 @@ public class DBPercistence {
     @Autowired
     public StudentRepository studentRepository;
 
-   // @Autowired
-   // public UserRepository userRepository;
+    // @Autowired
+    // public UserRepository userRepository;
 
     public void percistGeneralData() {
 
@@ -96,143 +97,147 @@ public class DBPercistence {
     }
 
     public void percistStudent() {
-        Calendar dateOfBirth1 = Calendar.getInstance();
-        dateOfBirth1.set(1982, 06, 14);
 
+//        Calendar dateOfBirth1 = Calendar.getInstance();
+//        dateOfBirth1.set(1982, 06, 14);
 
-        Student student1 = new Student("Marcelo Paulo Rebello Martins", "27769157803", "mp.rebello.martins@gmail.com", "Developer",
-                dateOfBirth1, GenderType.MALE, new Phone(12, "991976552", "Vivo", TelephoneType.CEL),
+//        Calendar dateOfBirth2 = Calendar.getInstance();
+//        dateOfBirth1.set(1982, 02, 12);
+//
+//        Calendar dateOfBirth = Calendar.getInstance();
+//        dateOfBirth.set(1990, 7, 21);
+
+        LocalDate dateBirthMarcelo = LocalDate.of(1982, 6, 14);
+        Student student1 = new Student("Marcelo Paulo Rebello Martins", "27769157803", new EmailEntity("mp.rebello.martins@gmail.com"), "Developer",
+                dateBirthMarcelo, GenderType.M, new Phone(12, "991976552", "Vivo", TelephoneType.CEL),
                 new Address("Avenida Antonio Pinheiro Junior, 1805", "Casa 50", "Pindamonhangaba", "Jardim Cristina", "SP", "12400000", AddressType.RES));
 
-        Calendar dateOfBirth2 = Calendar.getInstance();
-        dateOfBirth1.set(1982, 02, 12);
-        Student student2 = new Student("Patricia Cinti Ramos Martins", "30158469810", "patymorr@hotmail", "SAP Analist",
-                dateOfBirth2, GenderType.FEM, new Phone(12, "36431881", "Vivo", TelephoneType.REC),
+        LocalDate dateBirthPatricia = LocalDate.of(1982, 2, 12);
+        Student student2 = new Student("Patricia Cinti Ramos Martins", "30158469810", new EmailEntity("patymorr@hotmail.com"), "SAP Analist",
+                dateBirthPatricia, GenderType.F, new Phone(12, "36431881", "Vivo", TelephoneType.REC),
                 new Address("Rua Tipuanas, 64", "Village Paineiras", "Pindamonhangaba", "Socorro", "SP", "12412060", AddressType.CORR));
 
-        Student student3 = new Student("Adelina dos Santos Rebello", "06558416875", "adelinarebello@gmail.com",
+        Student student3 = new Student("Adelina dos Santos Rebello", "06558416875", new EmailEntity("adelinarebello@gmail.com"),
                 "Do Lar");
-        Student student4 = new Student("José Roberto", "07212854425", "n.a.info@hotmail.com", "Autonomo De TI");
-        Student student5 = new Student("Carlos do Nascimento Moura", "54468548703", "carlos.nascimento@gmail.com",
+        Student student4 = new Student("José Roberto", "07212854425", new EmailEntity("n.a.info@hotmail.com"), "Autonomo De TI");
+        Student student5 = new Student("Carlos do Nascimento Moura", "54468548703", new EmailEntity("carlos.nascimento@gmail.com"),
                 "Analista de Infra");
-        Student student6 = new Student("André Henrique Souza Mendes", "20165469840", "andre.mendesr@bol.com.br",
+        Student student6 = new Student("André Henrique Souza Mendes", "20165469840", new EmailEntity("andre.mendesr@bol.com.br"),
                 "Analista de Suporte");
-        Student student7 = new Student("Anderson Silva Junior", "55568485215", "anderson.silva@uol.com.br", "Mecanico");
-        Student student8 = new Student("José Moura Carlos", "22305659803", "n.a.info@hotmail.com",
+        Student student7 = new Student("Anderson Silva Junior", "55568485215", new EmailEntity("anderson.silva@uol.com.br"), "Mecanico");
+        Student student8 = new Student("José Moura Carlos", "22305659803", new EmailEntity("n.a.info@hotmail.com"),
                 "Programador de circuitos");
-        Student student9 = new Student("Anderson do Nascimento JR", "45215584523", "anderson.nasc@gmail.com",
+        Student student9 = new Student("Anderson do Nascimento JR", "45215584523", new EmailEntity("anderson.nasc@gmail.com"),
                 "Instrutor de BI");
-        Student student10 = new Student("Alfredo Henrique siqueira Campos", "65526448752", "alfredo.siqueira@gmail.com",
+        Student student10 = new Student("Alfredo Henrique siqueira Campos", "65526448752", new EmailEntity("alfredo.siqueira@gmail.com"),
                 "Encanador");
-        Student student11 = new Student("Sandro Come Villas", "54275454235", "sandro.comes@hotmail.com", "Pedreiro");
-        Student student12 = new Student("Roberto De Moura Enernest", "13236654185", "roberto.ernesto@hotmail.com",
+        Student student11 = new Student("Sandro Come Villas", "54275454235", new EmailEntity("sandro.comes@hotmail.com"), "Pedreiro");
+        Student student12 = new Student("Roberto De Moura Enernest", "13236654185", new EmailEntity("roberto.ernesto@hotmail.com"),
                 "Construtor Civil");
-        Student student13 = new Student("Carlos Mandarova De Oliveira", "26515483213", "carlos.oliveira@yahoo.com.br",
+        Student student13 = new Student("Carlos Mandarova De Oliveira", "26515483213", new EmailEntity("carlos.oliveira@yahoo.com.br"),
                 "Analista de Recursos");
-        Student student14 = new Student("José Claudio Martins", "57565454520", "joseclaudio@gmail.com",
+        Student student14 = new Student("José Claudio Martins", "57565454520", new EmailEntity("joseclaudio@gmail.com"),
                 "Analista de Suporte");
-        Student student15 = new Student("Cesar Henrique Nascimento Santos", "54621546898", "cesarhenrique@terra.com.br",
+        Student student15 = new Student("Cesar Henrique Nascimento Santos", "54621546898", new EmailEntity("cesarhenrique@terra.com.br"),
                 "Web Desingner");
-        Student student16 = new Student("Carlos Butoso Neto", "62056468542", "carlos.butoso@hotmail.com", "Autonomo");
-        Student student17 = new Student("Adriano De Reis Oliveira", "45423568703", "mp.rebello.martins@gmail.com",
+        Student student16 = new Student("Carlos Butoso Neto", "62056468542", new EmailEntity("carlos.butoso@hotmail.com"), "Autonomo");
+        Student student17 = new Student("Adriano De Reis Oliveira", "45423568703", new EmailEntity("mp.rebello.martins@gmail.com"),
                 "Pintor");
-        Student student18 = new Student("Jorge Del Salto", "15435185524", "jorgesalto@t2m.com", "Analista de Suporte");
-        Student student19 = new Student("José Francisco Carlos Souza", "27765424804", "josefrancisco@tendnet.com",
+        Student student18 = new Student("Jorge Del Salto", "15435185524", new EmailEntity("jorgesalto@t2m.com"), "Analista de Suporte");
+        Student student19 = new Student("José Francisco Carlos Souza", "27765424804", new EmailEntity("josefrancisco@tendnet.com"),
                 "Médico");
-        Student student20 = new Student("Erivaldo Henrique Mello", "33555245245", "erivaldo@hotmail.com", "Dentista");
-        Student student21 = new Student("Sandro Pereira Barbosa", "45215654543", "mp.rebello.martins@gmail.com",
+        Student student20 = new Student("Erivaldo Henrique Mello", "33555245245", new EmailEntity("erivaldo@hotmail.com"), "Dentista");
+        Student student21 = new Student("Sandro Pereira Barbosa", "45215654543", new EmailEntity("mp.rebello.martins@gmail.com"),
                 "Frentista");
-        Student student22 = new Student("Marcelino Henrique Reinz", "22468897220", "marcelino.reinz@mwl.com",
+        Student student22 = new Student("Marcelino Henrique Reinz", "22468897220", new EmailEntity("marcelino.reinz@mwl.com"),
                 "Eletricista");
-        Student student23 = new Student("Olavo Batista Odonoel", "30157563599", "olavobatista@terra.com.br",
+        Student student23 = new Student("Olavo Batista Odonoel", "30157563599", new EmailEntity("olavobatista@terra.com.br"),
                 "Borracheiro");
         Student student24 = new Student("José Francisco Nascimento Costa", "54468548803",
-                "francisco.nascimneto@infosec.com", "Técnico de TI");
-        Student student25 = new Student("Erisberto De Souza", "31963554543", "erisberto@modasinfo.com.br",
+                new EmailEntity("francisco.nascimneto@infosec.com"), "Técnico de TI");
+        Student student25 = new Student("Erisberto De Souza", "31963554543", new EmailEntity("erisberto@modasinfo.com.br"),
                 "Analista de RH");
-        Student student26 = new Student("Maria Andrezza Ramos Mello", "61105415244", "maria.andrezza@previdencia.com.br", "Analista de Infra");
-        Student student27 = new Student("Maria Carla De Oliveria Souza", "35100546564", "carlaolieira@mipseg.com.br",
+        Student student26 = new Student("Maria Andrezza Ramos Mello", "61105415244", new EmailEntity("maria.andrezza@previdencia.com.br"), "Analista de Infra");
+        Student student27 = new Student("Maria Carla De Oliveria Souza", "35100546564", new EmailEntity("carlaolieira@mipseg.com.br"),
                 "Lavadora");
-        Student student28 = new Student("José Ribas Francisco Costa", "35566410754", "jose.ribas@securittyl.com",
+        Student student28 = new Student("José Ribas Francisco Costa", "35566410754", new EmailEntity("jose.ribas@securittyl.com"),
                 "Copeiro");
-        Student student29 = new Student("Sandra Evelino Adal", "52105654454", "sandra@ig.com.br", "Cozinheira");
-        Student student30 = new Student("Marcos Marcolino Souza", "61554283454", "marcos.info@hotmail.com",
+        Student student29 = new Student("Sandra Evelino Adal", "52105654454", new EmailEntity("sandra@ig.com.br"), "Cozinheira");
+        Student student30 = new Student("Marcos Marcolino Souza", "61554283454", new EmailEntity("marcos.info@hotmail.com"),
                 "Desembargador");
 
-        Student student31 = new Student("Evelino dos Santos Reis", "54425625481", "evelino.reis@hotmail.com", "Desembargador");
-        Student student32 = new Student("Alberto Henrique Mello", "34198125445", "erivaldo@hotmail.com", "Dentista");
-        Student student33 = new Student("Sandro Pereira Barbosa", "32564874523", "mp.rebello.martins@gmail.com",
+        Student student31 = new Student("Evelino dos Santos Reis", "54425625481", new EmailEntity("evelino.reis@hotmail.com"), "Desembargador");
+        Student student32 = new Student("Alberto Henrique Mello", "34198125445", new EmailEntity("erivaldo@hotmail.com"), "Dentista");
+        Student student33 = new Student("Sandro Pereira Barbosa", "32564874523", new EmailEntity("mp.rebello.martins@gmail.com"),
                 "Frentista");
-        Student student34 = new Student("Marcelino Henrique Reinz", "10215458720", "marcelino.reinz@mwl.com",
+        Student student34 = new Student("Marcelino Henrique Reinz", "10215458720", new EmailEntity("marcelino.reinz@mwl.com"),
                 "Eletricista");
-        Student student35 = new Student("Olavo Batista Odonoel", "20132564599", "olavobatista@terra.com.br",
+        Student student35 = new Student("Olavo Batista Odonoel", "20132564599", new EmailEntity("olavobatista@terra.com.br"),
                 "Borracheiro");
         Student student36 = new Student("José Francisco Nascimento Costa", "45312886603",
-                "francisco.nascimneto@infosec.com", "Técnico de TI");
-        Student student37 = new Student("Erisberto De Souza", "47582454543", "erisberto@modasinfo.com.br",
+                new EmailEntity("francisco.nascimneto@infosec.com"), "Técnico de TI");
+        Student student37 = new Student("Erisberto De Souza", "47582454543", new EmailEntity("erisberto@modasinfo.com.br"),
                 "Analista de RH");
-        Student student38 = new Student("Maria Andrezza Ramos Mello", "43546765444", "maria.andrezza@previdencia.com.br", "Analista de Infra");
-        Student student39 = new Student("Maria Carla De Oliveria Souza", "35343546664", "carlaolieira@mipseg.com.br", "Lavadora");
-        Student student40 = new Student("José Ribas Francisco Costa", "12687565444", "jose.ribas@securittyl.com",
+        Student student38 = new Student("Maria Andrezza Ramos Mello", "43546765444", new EmailEntity("maria.andrezza@previdencia.com.br"), "Analista de Infra");
+        Student student39 = new Student("Maria Carla De Oliveria Souza", "35343546664", new EmailEntity("carlaolieira@mipseg.com.br"), "Lavadora");
+        Student student40 = new Student("José Ribas Francisco Costa", "12687565444", new EmailEntity("jose.ribas@securittyl.com"),
                 "Copeiro");
-        Student student41 = new Student("Sandra Evelino Abdal", "55345677854", "sandra@ig.com.br", "Cozinheira");
-        Student student42 = new Student("Marcos Marcolino Souza Mendez", "61589784454", "marcos.info@hotmail.com",
+        Student student41 = new Student("Sandra Evelino Abdal", "55345677854", new EmailEntity("sandra@ig.com.br"), "Cozinheira");
+        Student student42 = new Student("Marcos Marcolino Souza Mendez", "61589784454", new EmailEntity("marcos.info@hotmail.com"),
                 "esembargador");
 
-        Student student43 = new Student("Marcolino Neto Souza", "61554425374", "marcos.info@hotmail.com", "Desembargador");
+        Student student43 = new Student("Marcolino Neto Souza", "61554425374", new EmailEntity("marcos.info@hotmail.com"), "Desembargador");
 
-        Student student44 = new Student("Evelin dos Santos Reis", "54456346712", "evelino.reis@hotmail.com", "Desembargador");
-        Student student45 = new Student("Jerivaldo Henrique Mello", "95544745544", "erivaldo@hotmail.com", "Dentista");
-        Student student46 = new Student("Sandra Pereira Barbosa Mello", "45215647583", "mp.rebello.martins@gmail.com",
+        Student student44 = new Student("Evelin dos Santos Reis", "54456346712", new EmailEntity("evelino.reis@hotmail.com"), "Desembargador");
+        Student student45 = new Student("Jerivaldo Henrique Mello", "95544745544", new EmailEntity("erivaldo@hotmail.com"), "Dentista");
+        Student student46 = new Student("Sandra Pereira Barbosa Mello", "45215647583", new EmailEntity("mp.rebello.martins@gmail.com"),
                 "Frentista");
-        Student student47 = new Student("Marcelino Henrique Reinz", "14346723260", "marcelino.reinz@mwl.com",
+        Student student47 = new Student("Marcelino Henrique Reinz", "14346723260", new EmailEntity("marcelino.reinz@mwl.com"),
                 "Eletricista");
 
-        Student student48 = new Student("Marcelli Carlos Henrique Reinz", "24897654460", "marcelino.reinz@mwl.com",
+        Student student48 = new Student("Marcelli Carlos Henrique Reinz", "24897654460", new EmailEntity("marcelino.reinz@mwl.com"),
                 "Eletricista");
 
-        Student student49 = new Student("Olavo Odonoel", "23535788459", "olavobatista@terra.com.br",
+        Student student49 = new Student("Olavo Odonoel", "23535788459", new EmailEntity("olavobatista@terra.com.br"),
                 "Borracheiro");
-        Student student50 = new Student("Erisberto De Ramos", "89568547343", "erisberto@modasinfo.com.br",
+        Student student50 = new Student("Erisberto De Ramos", "89568547343", new EmailEntity("erisberto@modasinfo.com.br"),
                 "Analista de RH");
         Student student51 = new Student("Maria Andrezza Mello Vergueiro", "56756845244",
-                "maria.andrezza@previdencia.com.br", "Analista de Infra");
-        Student student52 = new Student("Maria Carla De Souza Teixeira", "33678967764", "carlaolieira@mipseg.com.br", "Lavadora");
-        Student student53 = new Student("José Ribas Francisco Costa", "12354769067", "jose.ribas@securittyl.com",
+                new EmailEntity("maria.andrezza@previdencia.com.br"), "Analista de Infra");
+        Student student52 = new Student("Maria Carla De Souza Teixeira", "33678967764", new EmailEntity("carlaolieira@mipseg.com.br"), "Lavadora");
+        Student student53 = new Student("José Ribas Francisco Costa", "12354769067", new EmailEntity("jose.ribas@securittyl.com"),
                 "Copeiro");
         Student student54 = new Student("Francisco Oliveira Costa Junior", "12345489953",
-                "francisco.olveira@infosec.com", "Técnico de TI");
+                new EmailEntity("francisco.olveira@infosec.com"), "Técnico de TI");
         Student student55 = new Student("Carlos Alberto Francisco Nascimento Costa", "23490678566",
-                "carlos.alberto@infosec.com", "Técnico de TI");
+                new EmailEntity("carlos.alberto@infosec.com"), "Técnico de TI");
         Student student56 = new Student("José Costa", "12470676453",
-                "jose.costa@infinit.net", "Técnico de TI");
+                new EmailEntity("jose.costa@infinit.net"), "Técnico de TI");
         Student student57 = new Student("José Teixeira Oliveira Salgado", "12378756533",
-                "jose.salgado.t@infosecurity.com", "Técnico de TI");
+                new EmailEntity("jose.salgado.t@infosecurity.com"), "Técnico de TI");
         Student student58 = new Student("Marcos de Julio Paula", "12378903463",
-                "nascimneto.paula@band.com.tv", "Técnico de TI");
+                new EmailEntity("nascimneto.paula@band.com.tv"), "Técnico de TI");
         Student student59 = new Student("Adriana Ferreir Bicudo", "89056345603",
-                "adriana-ferreira@infomaster.com.br", "Técnico de TI");
+                new EmailEntity("adriana-ferreira@infomaster.com.br"), "Técnico de TI");
         Student student60 = new Student("Carlos Reis de Mouta Filho", "67456899703",
-                "carlos.moura@hello.com", "Técnico de TI");
+                new EmailEntity("carlos.moura@hello.com"), "Técnico de TI");
 
 
-        Student student61 = new Student("Patricia Carneiro Souza", "56514725752", "patriciamello@sapenginner.com",
+        Student student61 = new Student("Patricia Carneiro Souza", "56514725752", new EmailEntity("patriciamello@sapenginner.com"),
                 "Analista de Implantação SAP");
 
-        Student student62 = new Student("Juliano Lima Oliveira", "27349147803", "juliano.lima@latam.com", "Enginner",
-                GenderType.MALE, new Phone(12, "994652223", TelephoneType.CEL));
+        Student student62 = new Student("Juliano Lima Oliveira", "27349147803", new EmailEntity("juliano.lima@latam.com"), "Enginner",
+                GenderType.M, new Phone(12, "994652223", TelephoneType.CEL));
 
-        Student student63 = new Student("Juliano Lima Oliveira", "21458465789", "juliano.lima@latam.com", "Enginner",
-                GenderType.MALE, new Phone(12, "976545587", TelephoneType.CEL),
+        Student student63 = new Student("Juliano Lima Oliveira", "21458465789", new EmailEntity("juliano.lima@latam.com"), "Enginner",
+                GenderType.M, new Phone(12, "976545587", TelephoneType.CEL),
                 new Address("Av do Juliano Lima de Oliveira", "Pindamonhangaba", "Centro", "SP", "12400000",
                         AddressType.RES));
 
 
-        Calendar dateOfBirth = Calendar.getInstance();
-        dateOfBirth.set(1992, 7, 21);
-
-        Student student64 = new Student("Carlos Henrique Oliveira", "30158469818", "carlos.henrique@latam.com", "Enginner",
-                dateOfBirth, GenderType.MALE, new Phone(18, "955486518", "Carlos Henrique", TelephoneType.CEL),
+        LocalDate dateBirthCarlosHenrique = LocalDate.of(1980, 4, 16);
+        Student student64 = new Student("Carlos Henrique Oliveira", "30158469818", new EmailEntity("carlos.henrique@latam.com"), "Enginner",
+                dateBirthCarlosHenrique, GenderType.M, new Phone(18, "955486518", "Carlos Henrique", TelephoneType.CEL),
                 new Address("Avenida do Carlos Henrique", "Cidade do carlos henrique", "Centro", "SP", "12400000", AddressType.RES));
 
 

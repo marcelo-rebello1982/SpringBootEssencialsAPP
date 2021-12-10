@@ -1,22 +1,22 @@
 package br.com.applications.model;//package br.com.applications.disabledmodel;
 
-import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.extern.apachecommons.CommonsLog;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 
-@Data
-@CommonsLog
-@NoArgsConstructor
 @Entity
-@EqualsAndHashCode(callSuper = true)
+@RequiredArgsConstructor
+@Getter
+@Setter
 public class Profile extends AbstractEntity<Integer> implements Serializable {
 
     @Id
+    @EqualsAndHashCode.Include
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = GENERATOR)
     protected Integer Id;
 

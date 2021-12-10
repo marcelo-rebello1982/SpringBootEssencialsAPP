@@ -1,11 +1,10 @@
 package br.com.applications.model;//package br.com.applications.disabledmodel;
 
-import br.com.applications.generic.GenericEntity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.extern.apachecommons.CommonsLog;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
@@ -13,19 +12,18 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 
 
-@Data
-@CommonsLog
-@NoArgsConstructor
 @Entity
-@EqualsAndHashCode(callSuper = true)
+@RequiredArgsConstructor
+@Getter
+@Setter
 @NamedQueries({
         @NamedQuery(name = "Users.findAll", query = "SELECT u FROM Users u"),
         @NamedQuery(name = "Users.findByUsername", query = "SELECT u FROM Users u WHERE u.username = :username")})
-public class Users extends AbstractEntity<Integer> implements Serializable, GenericEntity<Users> {
+public class Users extends AbstractEntity<Integer> implements Serializable {
 
     @Id
+    @EqualsAndHashCode.Include
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = GENERATOR)
-    @Column(nullable = false)
     protected Integer Id;
 
     @Column(length = 60, nullable = false)
@@ -53,12 +51,12 @@ public class Users extends AbstractEntity<Integer> implements Serializable, Gene
 
     private LocalDateTime lastLoginDate;
 
-    @OneToOne(cascade=CascadeType.ALL)
-    @JoinTable(name="users_profile",
-            joinColumns={@JoinColumn(name="users_Id",
-                    referencedColumnName="Id")},
-                         inverseJoinColumns={@JoinColumn(name="profile_Id",
-                                referencedColumnName="Id")})
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinTable(name = "users_profile",
+            joinColumns = {@JoinColumn(name = "users_Id",
+                    referencedColumnName = "Id")},
+            inverseJoinColumns = {@JoinColumn(name = "profile_Id",
+                    referencedColumnName = "Id")})
     private Profile profile;
 
 
@@ -75,19 +73,5 @@ public class Users extends AbstractEntity<Integer> implements Serializable, Gene
         this.admin = admin;
         this.active = active;
         this.status = status;
-    }
-
-    @Override
-    public void update(Users source) {
-
-    }
-
-    public Integer findById() {
-        return null;
-    }
-
-    @Override
-    public Users createNewInstance() {
-        return null;
     }
 }

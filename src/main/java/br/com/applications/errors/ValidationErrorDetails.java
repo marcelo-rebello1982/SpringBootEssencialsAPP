@@ -1,6 +1,5 @@
 package br.com.applications.errors;
 
-
 public class ValidationErrorDetails extends ErrorDetails {
 
     private String field;

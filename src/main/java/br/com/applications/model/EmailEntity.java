@@ -1,31 +1,38 @@
 package br.com.applications.model;
 
-import br.com.applications.model.AbstractEntity;
-import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.extern.apachecommons.CommonsLog;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
+import javax.validation.constraints.Pattern;
+import java.io.Serializable;
 
-@Data
-@CommonsLog
-@NoArgsConstructor
+@RequiredArgsConstructor
 @Entity
-@EqualsAndHashCode(callSuper = true)
-public class EmailEntity extends AbstractEntity<Integer> {
+@Getter @Setter
+public class EmailEntity extends AbstractEntity<Integer> implements Serializable {
 
     @Id
+    @EqualsAndHashCode.Include
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = GENERATOR)
-    @Column(nullable = false)
     protected Integer Id;
 
-    @Email
+    @Email(regexp = "^[\\w!#$%&'*+/=?`{|}~^-]+(?:\\.[\\w!#$%&'*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$",
+            flags = Pattern.Flag.CASE_INSENSITIVE)
+    @Column(nullable = true)
     private String email;
 
     @ManyToOne
-    @JoinColumn(name="student_id")
+    @JoinColumn(name = "student_Id", referencedColumnName = "Id")
+    @OnDelete(action = OnDeleteAction.CASCADE)
     private Student student;
 
+    public EmailEntity(String email) {
+        this.email = email;
+    }
 }

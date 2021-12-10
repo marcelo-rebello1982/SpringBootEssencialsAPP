@@ -1,14 +1,8 @@
 package br.com.applications.errors;
 
-
-
 public class ResourceNotFoundDetails extends ErrorDetails {
 
-    /**
-     *
-     */
     private static final long serialVersionUID = -5620884056498969879L;
-
 
     public static final class Builder {
 

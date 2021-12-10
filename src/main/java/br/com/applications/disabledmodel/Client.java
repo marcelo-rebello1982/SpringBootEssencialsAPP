@@ -5,7 +5,7 @@
 //import org.hibernate.validator.constraints.br.CPF;
 //
 //import javax.persistence.*;
-//import javax.validation.constraints.Email;
+//import javax.validation.constraints.EmailEntity;
 //
 //@Entity
 //@Table(uniqueConstraints = {@UniqueConstraint(columnNames = "cpf")})
@@ -18,7 +18,7 @@
 //    @NotBlank(message = "Name is required")
 //    private String name;
 //
-//    @Email(message = "Invalid e-mail")
+//    @EmailEntity(message = "Invalid e-mail")
 //    @Column(unique = true, nullable = false)
 //    private String email;
 //

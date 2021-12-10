@@ -6,6 +6,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 import javax.transaction.Transactional;
+import java.util.List;
 
 public abstract class GenericService<T extends GenericEntity<T>> {
 
@@ -18,6 +19,11 @@ public abstract class GenericService<T extends GenericEntity<T>> {
     public Page<T> getPage(Pageable pageable) {
         return genericRepository.findAll(pageable);
     }
+
+    public List<T> findAll() {
+        return genericRepository.findAll();
+    }
+
 
     public T get(Integer Id) {
         return genericRepository.findById(Id)

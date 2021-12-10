@@ -16,8 +16,8 @@ public abstract class GenericController<T extends GenericEntity<T>> {
         };
     }
 
-    @org.springframework.web.bind.annotation.GetMapping("")
-    public ResponseEntity<Page<T>> getPage(Pageable pageable) {
+    @GetMapping("findAllByPage")
+    public ResponseEntity<Page<T>> findAllByPage(Pageable pageable) {
         return ResponseEntity.ok(service.getPage(pageable));
     }
 
@@ -26,26 +26,14 @@ public abstract class GenericController<T extends GenericEntity<T>> {
         return ResponseEntity.ok(service.save(created));
     }
 
-    @org.springframework.web.bind.annotation.GetMapping("findById/{id}")
+    @GetMapping("findById/{id}")
     public ResponseEntity<T> findById(@PathVariable Integer Id) {
         return ResponseEntity.ok(service.get(Id));
     }
 
-
     @PutMapping("update")
     public ResponseEntity<T> update(@RequestBody T updated) {
         return ResponseEntity.ok(service.update(updated));
-    }
-
-//    @DeleteMapping("delete")
-//    public Map<String, Boolean> delete(@RequestParam Integer Id) throws ResourceNotFoundException {
-//        Map<String, Boolean> response = new HashMap<>();
-//        return response;
-//    }
-
-    @GetMapping("findAllByPage")
-    public ResponseEntity<Page<T>> findAllByPage(Pageable pageable) {
-        return ResponseEntity.ok(service.getPage(pageable));
     }
 
     public ResponseEntity<?> listAll(Pageable pageable) {

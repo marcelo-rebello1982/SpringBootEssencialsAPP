@@ -14,16 +14,16 @@ import java.util.List;
 public class StudentController {
 
 
-    private static final List<Student> STUDENTS = Arrays.asList(
-            new Student(1, "Marcelo Paulo Rebello Martins", "27769157803", "mp.rebello.martins@gmail.com", "Developer"),
-            new Student(2, "Patricia Cinti Ramos Martins", "30158469810", "patymorr@hotmail.com", ""),
-            new Student(3, "", "Adelina Dos Santos Rebello", "06558416810", "adelina.santos@terra.com.br"));
-
-
-    @GetMapping("findByID/{student_Id}")
-    public Student getStudent(@PathVariable("student_Id") Integer studentId) {
-        return STUDENTS.stream().filter(student -> studentId.equals(student.getId())).findFirst()
-                .orElseThrow(() -> new IllegalArgumentException("Student " + studentId + " does not exist"));
-
-    }
+//    private static final List<Student> STUDENTS = Arrays.asList(
+//            new Student(1, "Marcelo Paulo Rebello Martins", "27769157803", "mp.rebello.martins@gmail.com", "Developer"),
+//            new Student(2, "Patricia Cinti Ramos Martins", "30158469810", "patymorr@hotmail.com", ""),
+//            new Student(3, "", "Adelina Dos Santos Rebello", "06558416810", "adelina.santos@terra.com.br"));
+//
+//
+//    @GetMapping("findByID/{student_Id}")
+//    public Student getStudent(@PathVariable("student_Id") Integer studentId) {
+//        return STUDENTS.stream().filter(student -> studentId.equals(student.getId())).findFirst()
+//                .orElseThrow(() -> new IllegalArgumentException("Student " + studentId + " does not exist"));
+//
+//    }
 }

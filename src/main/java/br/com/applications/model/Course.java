@@ -1,33 +1,30 @@
-//package br.com.applications.model;
-//
-//import com.fasterxml.jackson.annotation.JsonIgnore;
-//import lombok.EqualsAndHashCode;
-//import lombok.Getter;
-//import lombok.NoArgsConstructor;
-//import lombok.Setter;
-//import lombok.extern.apachecommons.CommonsLog;
-//
-//import javax.persistence.*;
-//import java.io.Serializable;
-//import java.util.Set;
-//
-//@Getter
-//@Setter
-//@Entity
-//@CommonsLog
-//@NoArgsConstructor
-//@EqualsAndHashCode(callSuper = true)
-//public class Course extends AbstractEntity<Integer> implements Serializable {
-//
-//
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = GENERATOR)
-//    @Column(name = "course_id", nullable = false)
-//    protected Integer Id;
-//
-//    private String course;
-//
-// //   @ManyToMany(mappedBy = "courses")
-// //   @JsonIgnore
-// //   private Set<Student> studentSet;
-//}
+package br.com.applications.model;
+
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import java.io.Serializable;
+
+@Entity
+@RequiredArgsConstructor
+@Getter @Setter
+public class Course extends AbstractEntity<Integer> implements Serializable {
+
+    @Id
+    @EqualsAndHashCode.Include
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = GENERATOR)
+    protected Integer Id;
+
+    private String course;
+
+//    @JsonIgnore
+//    @ManyToMany(mappedBy = "courses")
+//    private Set<Student> studentSet;
+
+}

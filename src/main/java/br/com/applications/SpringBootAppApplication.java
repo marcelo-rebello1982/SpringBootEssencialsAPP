@@ -12,10 +12,8 @@ import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfi
 public class SpringBootAppApplication implements CommandLineRunner {
 
 
-
     @Autowired
     public DBPercistence dbPercistence;
-
 
 
     public static void main(String[] args) {
@@ -30,21 +28,13 @@ public class SpringBootAppApplication implements CommandLineRunner {
 //        properties.put("spring.jpa.properties.javax.persistence.schema-generation.scripts.create-target", "script_create_schema.sql");
 
 
-
         SpringApplication.run(SpringBootAppApplication.class, args);
     }
 
     @Override
     public void run(String... args) throws Exception {
 
-        percistStudent();
-
-
-        //	dto , ver este projeto tmb
-
-        //	https://digitalinnovation.one/artigos/api-rest-para-controle-de-vacinacao
-
-        //	https://gist.github.com/VitorEmanuelDev
+       // percistStudent();
 
     }
 

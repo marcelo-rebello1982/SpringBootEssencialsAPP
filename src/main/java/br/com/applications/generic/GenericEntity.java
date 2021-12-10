@@ -1,7 +1,6 @@
 package br.com.applications.generic;
 
 
-
 public interface GenericEntity<T> {
 
     void update(T source);
